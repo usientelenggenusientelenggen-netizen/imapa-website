@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100d18">
+    <meta name="description" content="VELORA — berbagi momen, menemukan inspirasi, dan terhubung dengan dunia.">
+    <title>applikasi VELORA — Share Your World ulla</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <a class="brand" href="#home">VELORA<span>✦</span></a>
+            <p class="side-caption">YOUR WORLD, YOUR STORY</p>
+
+            <nav class="side-nav" aria-label="Menu utama">
+                <button class="nav-link active" data-menu="home">⌂ <span>Beranda</span></button>
+                <button class="nav-link" data-menu="explore">⌕ <span>Jelajahi</span></button>
+                <button class="nav-link" data-menu="messages">✉️ <span>Pesan</span></button>
+                <button class="nav-link" data-menu="notifications">♡ <span>Notifikasi</span></button>
+                <button class="nav-link" data-menu="profile">◎ <span>Profil Saya</span></button>
+            </nav>
+
+            <button class="create-button" id="createButton">＋ Buat Postingan</button>
+
+            <div class="sidebar-user">
+                <img src="https://i.pravatar.cc/100?img=12" alt="Foto profil">
+                <div><strong>velora.creator</strong><small>Creator account</small></div>
+            </div>
+        </aside>
+
+        <!-- KONTEN -->
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <h1>Temukan keindahan.</h1>
+                    <p>Setiap momen punya ceritanya sendiri.</p>
+                </div>
+                <label class="search-box">
+                    <span>⌕</span>
+                    <input type="search" id="searchInput" placeholder="Cari inspirasi..." aria-label="Cari postingan">
+                </label>
+            </header>
+
+            <!-- BERANDA -->
+            <section class="page-section" data-page="home">
+                <section class="welcome-banner">
+                    <div class="banner-content">
+                        <span class="eyebrow">✦ SELAMAT DATANG DI VELORA</span>
+                        <h2>Dunia kamu.<br><span>Cerita kamu.</span></h2>
+                        <p>Temukan inspirasi, bagikan momen, dan terhubung dengan dunia.</p>
+                        <button class="banner-button" id="bannerCreateButton">Bagikan ceritamu ↗️</button>
+                    </div>
+                    <div class="banner-decoration">V</div>
+                </section>
+
+                <!-- STORY -->
+                <section class="stories-section">
+                    <div class="section-heading">
+                        <div>
+                            <h2>Cerita hari ini</h2>
+                            <p>Momen terbaru dari komunitasmu</p>
+                        </div>
+                        <button class="text-button" id="addStoryButton">＋ Ceritaku</button>
+                    </div>
+
+                    <div class="stories-list">
+                        <button class="story-item" id="storyCreateButton">
+                            <span class="story-ring own-story">
+                                <img src="https://i.pravatar.cc/100?img=12" alt="Foto profil saya"><i>＋</i>
+                            </span>
+                            <span>Ceritaku</span>
+                        </button>
+                        <button class="story-item"><span class="story-ring"><img src="https://i.pravatar.cc/100?img=47"
+                                    alt="Alya"></span><span>alya.jpg</span></button>
+                        <button class="story-item"><span class="story-ring"><img src="https://i.pravatar.cc/100?img=11"
+                                    alt="Dimas"></span><span>dimas.art</span></button>
+                        <button class="story-item"><span class="story-ring"><img src="https://i.pravatar.cc/100?img=32"
+                                    alt="Nara"></span><span>nara.travel</span></button>
+                        <button class="story-item"><span class="story-ring"><img src="https://i.pravatar.cc/100?img=5"
+                                    alt="Raka"></span><span>raka.visual</span></button>
+                        <button class="story-item"><span class="story-ring"><img src="https://i.pravatar.cc/100?img=44"
+                                    alt="Sinta"></span><span>sinta.daily</span></button>
+                    </div>
+                </section>
+
+                <!-- FEED POSTINGAN -->
+                <section class="feed-section">
+                    <div class="section-heading">
+                        <div>
+                            <h2>Untuk kamu</h2>
+                            <p>Inspirasi pilihan komunitas VELORA</p>
+                        </div>
+                        <span class="live-label"><i></i> LIVE FEED</span>
+                    </div>
+
+                    <article class="post">
+                        <div class="post-header">
+                            <img src="https://i.pravatar.cc/100?img=47" alt="Profil Alya">
+                            <div class="post-author"><strong>alya.jpg <span
+                                        class="verified">✦</span></strong><small>Ubud, Bali · 2 jam lalu</small></div>
+                            <button class="more-button" aria-label="Menu postingan">•••</button>
+                        </div>
+                        <div class="post-image-wrap">
+                            <img class="post-image"
+                                src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1200&q=85"
+                                alt="Laut biru" loading="lazy">
+                            <span class="image-tag">TRAVEL DIARY</span>
+                        </div>
+                        <div class="post-actions">
+                            <div class="action-left">
+                                <button class="like-button" aria-label="Sukai">♡</button>
+                                <button class="comment-button" aria-label="Komentar">♧</button>
+                                <button class="share-button" aria-label="Bagikan">↗️</button>
+                            </div>
+                            <button class="bookmark-button" aria-label="Simpan">♧</button>
+                        </div>
+                        <div class="post-body">
+                            <strong class="like-count">1.284 suka</strong>
+                            <p><strong>alya.jpg</strong> Terkadang yang kita butuhkan hanya laut, langit, dan waktu
+                                untuk diri sendiri. 🌊</p>
+                            <button class="view-comments">Lihat semua 86 komentar</button>
+                            <div class="comments-list"></div>
+                            <form class="comment-form">
+                                <input type="text" placeholder="Tulis komentar..." aria-label="Tulis komentar">
+                                <button type="submit">Kirim</button>
+                            </form>
+                        </div>
+                    </article>
+
+                    <article class="post">
+                        <div class="post-header">
+                            <img src="https://i.pravatar.cc/100?img=11" alt="Profil Dimas">
+                            <div class="post-author"><strong>dimas.art</strong><small>Bandung, Indonesia · 5 jam
+                                    lalu</small></div>
+                            <button class="more-button" aria-label="Menu postingan">•••</button>
+                        </div>
+                        <div class="post-image-wrap">
+                            <img class="post-image"
+                                src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=85"
+                                alt="Pegunungan dan danau" loading="lazy">
+                            <span class="image-tag">NATURE & SOUL</span>
+                        </div>
+                        <div class="post-actions">
+                            <div class="action-left">
+                                <button class="like-button" aria-label="Sukai">♡</button>
+                                <button class="comment-button" aria-label="Komentar">♧</button>
+                                <button class="share-button" aria-label="Bagikan">↗️</button>
+                            </div>
+                            <button class="bookmark-button" aria-label="Simpan">♧</button>
+                        </div>
+                        <div class="post-body">
+                            <strong class="like-count">958 suka</strong>
+                            <p><strong>dimas.art</strong> Alam selalu punya cara untuk mengingatkan kita agar berhenti
+                                sejenak. 🍃</p>
+                            <button class="view-comments">Lihat semua komentar</button>
+                            <div class="comments-list"></div>
+                            <form class="comment-form">
+                                <input type="text" placeholder="Tulis komentar..." aria-label="Tulis komentar">
+                                <button type="submit">Kirim</button>
+                            </form>
+                        </div>
+                    </article>
+                </section>
+            </section>
+
+            <!-- JELAJAHI -->
+            <section class="page-section secondary-page" data-page="explore" hidden>
+                <div class="section-heading">
+                    <div>
+                        <h2>Jelajahi dunia</h2>
+                        <p>Temukan karya dan inspirasi baru.</p>
+                    </div>
+                </div>
+                <div class="explore-grid">
+                    <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=600&q=80"
+                        alt="Cahaya pagi">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80"
+                        alt="Pegunungan">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80"
+                        alt="Pemandangan alam">
+                    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=600&q=80"
+                        alt="Padang rumput">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80"
+                        alt="Danau">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80"
+                        alt="Hutan">
+                </div>
+            </section>
+
+            <!-- PESAN -->
+            <section class="page-section secondary-page" data-page="messages" hidden>
+                <h2>Pesan</h2>
+                <p>Ruang percakapan komunitas VELORA.</p>
+            </section>
+
+            <!-- NOTIFIKASI -->
+            <section class="page-section secondary-page" data-page="notifications" hidden>
+                <h2>Notifikasi</h2>
+                <p>Aktivitas komunitas VELORA akan tampil di sini.</p>
+            </section>
+            r
+            <!-- PROFIL -->
+            <section class="page-section secondary-page" data-page="profile" hidden>
+                <div class="profile-header">
+                    <img src="https://i.pravatar.cc/180?img=12" alt="alt= Foto profil">
+                    <div>
+                        <h2>velora.creator</h2>
+                        <p>Creator di VELORA ✦</p>
+                        <p>Berbagi cerita, karya, dan momen berharga.</p>
+                        <button class="create-button" id="profileCreateButton">＋ Buat Postingan</button>
+                    </div>
+                </div>
+                <h3>Galeri saya</h3>
+                <div class="explore-grid" id="myGallery">
+                    <p class="empty-gallery">Postingan kamu akan muncul di sini.</p>
+                </div>
+            </section>
+
+            <footer class="app-footer">
+                <strong>VELORA ✦</strong>
+                <p>Bagikan momen. Temukan makna.</p>
+                <small>©2026 admyin ulla Newanakc Community</small>
+            </footer>
+        </main>
+
+        <!-- PANEL KANAN -->
+        <aside class="right-panel">
+            <div class="profile-mini">
+                <img src="https://i.pravatar.cc/100?img=12" alt="Profil saya">
+                <div><strong>velora.creator</strong><small>Selamat datang kembali!</small></div>
+                <button class="text-button" data-menu="profile">Profil</button>
+            </div>
+
+            <div class="suggestion-card">
+                <div class="section-heading">
+                    <h3>Temukan teman</h3><span>✦</span>
+                </div>
+                <div class="suggestion"><img src="https://i.pravatar.cc/100?img=32" alt="Nara">
+                    <div><strong>nara.travel</strong><small>Fotografer perjalanan</small></div><button
+                        class="follow-button">Ikuti</button>
+                </div>
+                <div class="suggestion"><img src="https://i.pravatar.cc/100?img=5" alt="Raka">
+                    <div><strong>raka.visual</strong><small>Visual storyteller</small></div><button
+                        class="follow-button">Ikuti</button>
+                </div>
+                <div class="suggestion"><img src="https://i.pravatar.cc/100?img=44" alt="Sinta">
+                    <div><strong>sinta.daily</strong><small>Digital creator</small></div><button
+                        class="follow-button">Ikuti</button>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <span>✦ INSPIRASI HARI INI</span>
+                <blockquote>“Koleksi momen, bukan hanya benda.”</blockquote>
+                <small>— VELORA Daily</small>
+            </div>
+        </aside>
+    </div>
+
+    <!-- NAVIGASI MOBILE -->
+    <nav class="mobile-nav" aria-label="Navigasi HP">
+        <button class="active" data-menu="home" aria-label="Beranda">⌂</button>
+        <button data-menu="explore" aria-label="Jelajahi">⌕</button>
+        <button id="mobileCreateButton" aria-label="Buat postingan">＋</button>
+        <button data-menu="notifications" aria-label="Notifikasi">♡</button>
+        <button data-menu="profile" aria-label="Profil">◎</button>
+    </nav>
+
+    <!-- FORM UNGGAH -->
+    <dialog id="uploadDialog">
+        <form id="uploadForm">
+            <div class="dialog-heading">
+                <h2>Buat postingan ✦</h2><button type="button" id="closeDialog" aria-label="Tutup">✕</button>
+            </div>
+            <label for="photoInput">Pilih foto</label>
+            <input id="photoInput" type="file" accept="image/*" required>
+            <img id="imagePreview" alt="Pratinjau foto" hidden>
+            <label for="captionInput">Tulis ceritamu</label>
+            <textarea id="captionInput" rows="4" maxlength="500"
+                placeholder="Apa yang ingin kamu bagikan hari ini?"></textarea>
+            <button type="submit" class="create-button">Bagikan postingan</button>
+        </form>
+    </dialog>
+
+    <input type="file" id="storyInput" accept="image/*" hidden>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10101c">
+    <meta name="description" content="VELORA - Tempat berbagi inspirasi, foto, dan kreativitas.">
+    <title>VELORA - Share Your World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HALAMAN LOGIN -->
+    <section id="loginPage" class="auth-page">
+        <div class="auth-box">
+            <h1 class="logo">VELORA<span>.</span></h1>
+            <p class="muted">Bagikan duniamu. Temukan inspirasimu.</p>
+
+            <form id="loginForm">
+                <input id="loginName" type="text" placeholder="Nama pengguna" required>
+                <input id="loginPassword" type="password" placeholder="Kata sandi" required>
+                <button class="primary-btn" type="submit">Masuk Sekarang</button>
+            </form>
+
+            <p class="muted">Belum punya akun?
+                <a href="#" id="showRegister">Daftar di sini</a>
+            </p>
+            <p class="small-note">
+                Demo belajar: login ini belum menggunakan server.
+            </p>
+        </div>
+    </section>
+
+    <!-- HALAMAN PENDAFTARAN -->
+    <section id="registerPage" class="auth-page hidden">
+        <div class="auth-box">
+            <h1 class="logo">Bergabung dengan VELORA</h1>
+            <p class="muted">Mulai perjalanan kreatifmu.</p>
+
+            <form id="registerForm">
+                <input id="registerName" type="text" placeholder="Nama pengguna" required>
+                <input id="registerEmail" type="email" placeholder="Alamat email" required>
+                <input id="registerPassword" type="password" placeholder="Buat kata sandi" minlength="6" required>
+                <button class="primary-btn" type="submit">
+                    Buat Akun
+                </button>
+            </form>
+
+            <p class="muted">Sudah punya akun?
+                <a href="#" id="showLogin">Masuk di sini</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- APLIKASI UTAMA -->
+    <div id="app" class="hidden">
+
+        <header class="topbar">
+            <a href="#" class="logo">VELORA<span>.</span></a>
+            <div class="top-actions">
+                <button id="themeBtn" class="icon-btn" aria-label="Ganti tema">☀️</button>
+                <button id="logoutBtn" class="icon-btn" aria-label="Keluar">↪️</button>
+            </div>
+        </header>
+
+        <main class="container">
+
+            <!-- BERANDA -->
+            <section id="homeSection" class="page-section">
+                <div class="welcome">
+                    <div>
+                        <p class="eyebrow">SELAMAT DATANG DI VELORA</p>
+                        <h1>Bagikan momen,<br><span>ciptakan inspirasi.</span></h1>
+                        <p>Tempat cerita, kreativitas, dan ide bertemu.</p>
+                    </div>
+                    <div class="welcome-icon">✦</div>
+                </div>
+
+                <div class="section-heading">
+                    <h2>Cerita Hari Ini</h2>
+                    <span class="muted">Jelajahi inspirasi</span>
+                </div>
+
+                <div class="stories">
+                    <button class="story" data-story="Kreativitas dimulai dari keberanian untuk mencoba hal baru.">
+                        <span class="story-ring">✨</span>
+                        <span>Kreatif</span>
+                    </button>
+                    <button class="story" data-story="Keindahan sering ditemukan dalam hal-hal sederhana.">
+                        <span class="story-ring">🌿</span>
+                        <span>Alam</span>
+                    </button>
+                    <button class="story" data-story="Jangan berhenti belajar dan membangun impianmu.">
+                        <span class="story-ring">🚀</span>
+                        <span>Motivasi</span>
+                    </button>
+                    <button class="story" data-story="Abadikan momen kecil yang berarti bagimu.">
+                        <span class="story-ring">📸</span>
+                        <span>Fotografi</span>
+                    </button>
+                </div>
+
+                <div class="section-heading">
+                    <h2>Jelajahi Dunia</h2>
+                    <span class="muted">Konten pilihan</span>
+                </div>
+
+                <div id="feed" class="feed">
+
+                    <article class="post">
+                        <div class="post-user">
+                            <div class="avatar">V</div>
+                            <div><strong>Velora Studio</strong>
+                                <small>@velorastudio · Inspirasi</small>
+                            </div>
+                        </div>
+                        <img class="post-image"
+                            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85"
+                            alt="Pegunungan dan danau yang indah">
+                        <div class="post-content">
+                            <div class="post-actions">
+                                <button class="like-btn" aria-label="Sukai postingan">♡</button>
+                                <button class="share-btn" aria-label="Bagikan postingan">↗️</button>
+                            </div>
+                            <p class="likes">0 suka</p>
+                            <p><strong>Velora Studio</strong> Dunia ini penuh keindahan. Jangan lupa berhenti sejenak
+                                untuk menikmatinya. 🌄</p>
+                            <small class="muted">#Velora #Nature #Inspiration</small>
+                        </div>
+                    </article>
+
+                    <article class="post">
+                        <div class="post-user">
+                            <div class="avatar purple">K</div>
+                            <div><strong>Kreatif Setiap Hari</strong>
+                                <small>@kreatif · Kreativitas</small>
+                            </div>
+                        </div>
+                        <img class="post-image"
+                            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85"
+                            alt="Ruang kerja kreatif yang modern">
+                        <div class="post-content">
+                            <div class="post-actions">
+                                <button class="like-btn" aria-label="Sukai postingan">♡</button>
+                                <button class="share-btn" aria-label="Bagikan postingan">↗️</button>
+                            </div>
+                            <p class="likes">0 suka</p>
+                            <p><strong>Kreatif Setiap Hari</strong> Ide hebat bisa dimulai dari satu langkah kecil.
+                                Terus berkarya! 💡</p>
+                            <small class="muted">#Creative #DreamBig #Velora</small>
+                        </div>
+                    </article>
+
+                    <article class="post">
+                        <div class="post-user">
+                            <div class="avatar orange">P</div>
+                            <div><strong>Photo Explorer</strong>
+                                <small>@photoexplorer · Fotografi</small>
+                            </div>
+                        </div>
+                        <img class="post-image"
+                            src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1000&q=85"
+                            alt="Pemandangan matahari terbit di alam">
+                        <div class="post-content">
+                            <div class="post-actions">
+                                <button class="like-btn" aria-label="Sukai postingan">♡</button>
+                                <button class="share-btn" aria-label="Bagikan postingan">↗️</button>
+                            </div>
+                            <p class="likes">0 suka</p>
+                            <p><strong>Photo Explorer</strong> Setiap foto menyimpan cerita yang tidak selalu bisa
+                                dijelaskan dengan kata-kata. 📷</p>
+                            <small class="muted">#Photography #Explore #Art</small>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- GALERI -->
+            <section id="gallerySection" class="page-section hidden">
+                <div class="section-heading">
+                    <h1>Galeri Inspirasi</h1>
+                </div>
+                <p class="muted">Kumpulan pemandangan untuk menemani kreativitasmu.</p>
+                <div class="gallery-grid">
+                    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=700&q=80"
+                        alt="Danau pegunungan">
+                    <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=700&q=80"
+                        alt="Matahari terbit">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80"
+                        alt="Pemandangan alam">
+                    <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=700&q=80"
+                        alt="Satwa di alam">
+                    <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=700&q=80"
+                        alt="Langit senja">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80"
+                        alt="Gunung tinggi">
+                </div>
+            </section>
+
+            <!-- PROFIL -->
+            <section id="profileSection" class="page-section hidden">
+                <div class="profile-card">
+                    <div class="profile-cover"></div>
+                    <div class="profile-avatar">V</div>
+                    <h2 id="profileName">Pengguna VELORA</h2>
+                    <p class="muted">Penjelajah ide dan kreativitas ✨</p>
+                    <div class="profile-stats">
+                        <div><strong id="postCount">3</strong><span>Postingan</span></div>
+                        <div><strong>128</strong><span>Pengikut</span></div>
+                        <div><strong>96</strong><span>Mengikuti</span></div>
+                    </div>
+                    <p class="profile-bio">Selamat datang di ruang kreatif saya. Terus berbagi hal positif!</p>
+                    <button id="editProfileBtn" class="primary-btn">Edit Nama Profil</button>
+                </div>
+            </section>
+
+        </main>
+
+        <nav class="bottom-nav">
+            <button class="nav-btn active" data-page="homeSection">
+                <span>⌂</span>Beranda
+            </button>
+            <button class="nav-btn" data-page="gallerySection">
+                <span>▦</span>Galeri
+            </button>
+            <button class="nav-btn" id="createPostBtn">
+                <span class="create-icon">＋</span>Buat
+            </button>
+            <button class="nav-btn" data-page="profileSection">
+                <span>◎</span>Profil
+            </button>
+        </nav>
+
+    </div>
+
+    <div id="toast" class="toast" role="status"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
